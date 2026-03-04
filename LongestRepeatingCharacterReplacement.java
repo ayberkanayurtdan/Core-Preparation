@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class LongestRepeatingCharacterReplacement {
-
+    //Sliding Window && Array(Highly Optimal) - Time Complexity= O(n) - Space Complexity= O(1)
     public int characterReplacement(String s, int k) {
         int[] frequencyArr= new int[26];
         int l=0,r=0, maxFreq=0, maxLength=0;
@@ -21,7 +21,7 @@ public class LongestRepeatingCharacterReplacement {
         return maxLength;
 
     }
-
+    //Sliding Window && HashMap(Optimal) - Time Complexity= O(n) - Space Complexity= O(26)=~O(1)
     public int characterReplacementWithHashMap(String s, int k) {
         HashMap<Character,Integer> frequencyMap = new HashMap<>(26);
         int l=0,r=0, maxFreq=0, maxLength=0;
@@ -39,7 +39,7 @@ public class LongestRepeatingCharacterReplacement {
 
         }
         return maxLength;
-
+        
     }
     
 }
